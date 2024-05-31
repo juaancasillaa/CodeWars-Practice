@@ -10,16 +10,19 @@
 // Note: for this kata y isn't considered a vowel.
 
 
-// SOLUTION 
+// Pseudocode
+
+// 1. Write an function to call disemwoel
+// 2. Create an variable with an empty string that would containg the new word without the vowels
+// 3. Use a for loop that would iterate across the string.
+// 4. Use an if statement taht would check for any vowel letter.
+
+// SOLUTION WITH METHODS
 
 function disemvowel(str) {
     let newStr = "";
     for (let i = 0; i < str.length; i++) {
-        if (str[i].toLowerCase() !== 'a' &&
-            str[i].toLowerCase() !== 'e' &&
-            str[i].toLowerCase() !== 'i' &&
-            str[i].toLowerCase() !== 'o' &&
-            str[i].toLowerCase() !== 'u') {
+        if (str[i] !== 'a' && str[i] !== 'e' && str[i] !== 'i' && str[i] !== 'o' && str[i] !== 'u') {
             newStr += str[i];
         }
     }
@@ -27,3 +30,15 @@ function disemvowel(str) {
 }
 
 console.log(disemvowel("Hello WOrld"));
+
+// SOLUTION WITHOUT METHODS
+
+function disemvowel(str) {
+    let newStr = "";
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] !== 'a' && str[i] !== 'A' && str[i] !== 'e' && str[i] !== 'E' && str[i] !== 'i' && str[i] !== 'I' && str[i] !== 'o' && str[i] !== 'O' && str[i] !== 'u' && str[i] !== 'U') {
+            newStr += str[i];
+        }
+    }
+    return newStr;
+}
